@@ -1,0 +1,131 @@
+/* GitHub Translate Plugin - 弹窗样式 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 280px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #1f2328;
+  background: #ffffff;
+}
+
+.popup-container {
+  padding: 0;
+}
+
+.popup-header {
+  padding: 12px 16px;
+  background: #f6f8fa;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.popup-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.popup-body {
+  padding: 12px 16px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 开关样式 */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c9d1d9;
+  transition: 0.2s;
+  border-radius: 22px;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: #2da44e;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(18px);
+}
+
+.status-row {
+  padding: 8px 0;
+  border-top: 1px solid #d0d7de;
+  margin-top: 4px;
+}
+
+.status-text {
+  font-size: 12px;
+  color: #656d76;
+}
+
+.btn-retranslate {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #24292f;
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-retranslate:hover {
+  background-color: #eaeef2;
+}
+
+.btn-retranslate:active {
+  background-color: #d0d7de;
+}
+
+.btn-retranslate:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
